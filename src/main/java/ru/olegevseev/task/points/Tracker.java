@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * класс со всеми методами которые использует приложение
+ */
 public final class Tracker {
     private static Tracker tracker;
     private final Set<Point> groupOne = new HashSet<>();

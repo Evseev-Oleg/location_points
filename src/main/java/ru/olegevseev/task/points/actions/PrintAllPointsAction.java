@@ -6,6 +6,9 @@ import ru.olegevseev.task.points.inputOutput.Output;
 
 import java.util.Set;
 
+/**
+ * класс выводящий на экран все точки
+ */
 public class PrintAllPointsAction implements UserAction {
     private final Output out;
 
@@ -13,11 +16,24 @@ public class PrintAllPointsAction implements UserAction {
         this.out = out;
     }
 
+    /**
+     * метод дает название действию PrintAll
+     * @return строка названия
+     */
     @Override
     public String name() {
         return "Print All points";
     }
 
+    /**
+     * метод выполняет действия
+     * вывода на экран всех точек
+     *
+     * @param input интерфейс ввода
+     * @param tracker класс с методом поиска точек findPoint()
+     * @return подтверждение для дальнейшей работы
+     * или выхода с программы
+     */
     @Override
     public boolean execute(Input input, Tracker tracker) {
         out.println("=== Show all Points ===");

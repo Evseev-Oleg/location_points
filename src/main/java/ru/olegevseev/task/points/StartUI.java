@@ -3,6 +3,9 @@ package ru.olegevseev.task.points;
 import ru.olegevseev.task.points.actions.*;
 import ru.olegevseev.task.points.inputOutput.*;
 
+/**
+ * класс стартер программы
+ */
 public class StartUI {
     private final Output out;
 

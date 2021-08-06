@@ -4,7 +4,9 @@ import ru.olegevseev.task.points.*;
 import ru.olegevseev.task.points.inputOutput.Input;
 import ru.olegevseev.task.points.inputOutput.Output;
 
-
+/**
+ * класс реализующий удаление выбранной группы
+ */
 public class RemoveGroupPointsAction implements UserAction {
     private final Output out;
 
@@ -12,11 +14,24 @@ public class RemoveGroupPointsAction implements UserAction {
         this.out = out;
     }
 
+    /**
+     * метод дает название действию RemoveGroup
+     * @return строка названия
+     */
     @Override
     public String name() {
         return "Remove Group Points";
     }
 
+    /**
+     * метод выполняет действия
+     * удаление точек по группам
+     *
+     * @param input интерфейс ввода
+     * @param tracker класс с методом удаления точек в выбранной группе
+     * @return подтверждение для дальнейшей работы
+     * или выхода с программы
+     */
     @Override
     public boolean execute(Input input, Tracker tracker) {
         out.println("=== Remove point group ===");

@@ -2,6 +2,9 @@ package ru.olegevseev.task.points;
 
 import java.util.Objects;
 
+/**
+ * класс описывающий сущность точки
+ */
 public class Point {
     private final int x;
     private final int y;

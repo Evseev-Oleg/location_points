@@ -1,8 +1,9 @@
 package ru.olegevseev.task.points.inputOutput;
 
-import ru.olegevseev.task.points.inputOutput.Input;
-import ru.olegevseev.task.points.inputOutput.Output;
-
+/**
+ * класс реализующий ввод данных
+ * и их валидацию
+ */
 public class ValidateInput implements Input {
     private final Output out;
     private final Input in;
@@ -12,10 +13,17 @@ public class ValidateInput implements Input {
         this.in = input;
     }
 
+    /**
+     * метод ввода строки
+     *
+     * @param question строка подсказка
+     * @return результат ввода
+     */
     @Override
     public String askStr(String question) {
         return in.askStr(question);
     }
+
 
     @Override
     public int askInt(String question) {

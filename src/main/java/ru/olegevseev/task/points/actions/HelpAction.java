@@ -4,6 +4,9 @@ import ru.olegevseev.task.points.inputOutput.Input;
 import ru.olegevseev.task.points.inputOutput.Output;
 import ru.olegevseev.task.points.Tracker;
 
+/**
+ * класс реализующий меню Help
+ */
 public class HelpAction implements UserAction {
     private final Output out;
 
@@ -11,11 +14,23 @@ public class HelpAction implements UserAction {
         this.out = out;
     }
 
+    /**
+     * метод дает название действию Help
+     * @return строка названия
+     */
     @Override
     public String name() {
         return "Help menu";
     }
 
+    /**
+     * метод текст с описание каждого действия
+     *
+     * @param input input
+     * @param tracker tracker
+     * @return подтверждение для дальнейшей работы
+     * или выхода с программы
+     */
     @Override
     public boolean execute(Input input, Tracker tracker) {
         out.println("=== Help ====");

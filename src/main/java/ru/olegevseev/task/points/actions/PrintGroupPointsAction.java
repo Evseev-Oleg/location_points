@@ -7,6 +7,9 @@ import ru.olegevseev.task.points.inputOutput.Output;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * класс выводящий на экран точки по группам
+ */
 public class PrintGroupPointsAction implements UserAction {
     private final Output out;
 
@@ -14,11 +17,24 @@ public class PrintGroupPointsAction implements UserAction {
         this.out = out;
     }
 
+    /**
+     * метод дает название действию PrintGroup
+     * @return строка названия
+     */
     @Override
     public String name() {
         return "Print Group Points";
     }
 
+    /**
+     * метод выполняет действия
+     * вывода точек по группам
+     *
+     * @param input интерфейс ввода
+     * @param tracker класс с методом поиска точек findPoint()
+     * @return подтверждение для дальнейшей работы
+     * или выхода с программы
+     */
     @Override
     public boolean execute(Input input, Tracker tracker) {
         Set<Point> result = new HashSet<>();
